@@ -1,10 +1,13 @@
-*.terraform/providers/registry.terraform.io/hashicorp/aws/4.51.0/darwin_arm64/terraform-provider-aws_v4.51.0_x5.terraform/providers/registry.terraform.io/hashicorp/aws/4.51.0/darwin_arm64/terraform-provider-aws_v4.51.0_x5
-*.terraform-provider-aws_v4.51.0_x5
+# .terraform/providers/registry.terraform.io/hashicorp/aws/4.51.0/darwin_arm64/terraform-provider-aws_v4.51.0_x5.terraform/providers/registry.terraform.io/hashicorp/aws/4.51.0/darwin_arm64/terraform-provider-aws_v4.51.0_x5
+# *.terraform-provider-aws_v4.51.0_x5
 
 
 # General
 .DS_Store
 
 # Logs
-logs
 *.log
+
+.hcl
+.backup
+.terraform
