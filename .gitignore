@@ -3,7 +3,7 @@
 
 
 # General
-.DS_Store
+#.DS_Store
 
 # Logs
 *.log
