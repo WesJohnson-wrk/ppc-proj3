@@ -4,9 +4,10 @@
 
 # General
 
-.DS_Store
-.log
-.hcl
-.backup
-.terraform
-.terraform/modules
+*.DS_Store
+*.log
+*.hcl
+*.backup
+*.terraform
+*.terraform/modules
+
