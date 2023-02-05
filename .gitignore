@@ -4,8 +4,8 @@
 
 # General
 
-*.DS_Store
-*.log
-*.hcl
-*.backup
+.DS_Store
+.log
+.hcl
+.backup
 .terraform
