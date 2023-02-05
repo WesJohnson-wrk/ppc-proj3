@@ -3,11 +3,9 @@
 
 
 # General
+
 #.DS_Store
-
-# Logs
-*.log
-
+.log
 .hcl
 .backup
 .terraform
