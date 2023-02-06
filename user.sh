@@ -1,3 +1,3 @@
 #!/bin/bash
-sudo apt update
+sudo apt update -y
 touch test.txt /home/ubuntu
