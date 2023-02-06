@@ -1,5 +1,7 @@
 text.txt
 
+this user data installs AWS CLI, JRE, Docker, Jenkins
+
 Setting up an EC2 for Jenkins -  USER DATA (draft)
 
 #!/bin/bash
