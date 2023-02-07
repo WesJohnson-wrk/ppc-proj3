@@ -1,7 +1,7 @@
 variable "default_tags" {
   type = map(string)
   default = {
-    "env" = "wpj-q2"
+    "env" = "ppc-proj3"
   }
   description = "describing my variable"
 }

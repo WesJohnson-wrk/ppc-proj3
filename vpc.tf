@@ -28,7 +28,7 @@ resource "aws_vpc" "main" {
   enable_dns_hostnames             = true
   enable_dns_support               = true
   tags = {
-    "Name" = "${var.default_tags.env}"
+    "Name" = "${var.default_tags.env}-vpc"
   }
 }
 # public subnets 10.0.0.0/24

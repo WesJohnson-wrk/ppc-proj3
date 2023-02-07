@@ -1,0 +1,55 @@
+#this user data installs apache and uploads a website from github
+
+#!/bin/bash
+sudo apt update -y
+sudo apt install apache2 -y
+sudo systemctl enable apache2
+cd /var/www/html
+#sudo rm index.html
+sudo git clone https://github.com/WesJohnson-wrk/index_test.git
+sudo cp -r index_test/* .
+#sudo systemctl start apache2
+ID=$(curl http://169.254.169.254/latest/meta-data/instance-id)
+sudo sed -i "s/_ID/$ID/" /var/www/html/index.html
+AZ=$(curl http://169.254.169.254/latest/meta-data/placement/availability-zone)
+sudo sed -i "s/_AZ/$AZ/" /var/www/html/index.html
+
+
+#################
+
+
+
+
+#this user data installs Apache, JRE, Docker, Jenkins
+
+#Setting up an EC2 for Jenkins -  USER DATA (draft)
+
+#!/bin/bash
+sudo apt update -y
+sudo apt install apache2 -y
+sudo systemctl enable apache2
+
+#JAVA
+sudo apt update -y
+sudo apt install default-jre -y
+
+
+#JENKINS
+sudo apt update -y
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt update -y
+sudo apt install jenkins -y
+
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+#sudo systemctl status jenkins
+sudo ufw allow 8080
+sudo ufw allow OpenSSH
+sudo ufw enable
+#sudo ufw status
+#sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+sudo mkdir /opt/jenkins
+sudo chown -R ubuntu /opt/jenkins
+
