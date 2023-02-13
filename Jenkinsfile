@@ -2,7 +2,7 @@
 pipeline {
     agent {
       node {
-        label "master"
+        label "main"
       } 
     }     stages {
       stage('fetch_latest_code') {
